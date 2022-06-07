@@ -10,15 +10,15 @@ import PosterCard from './PosterCard'
 const PosterSwiper = () => {
   return (
     <>
-      <Box p={10}>
+      <Box>
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
           <SwiperSlide>
-            <Box p={10}>
+            <Box p={0}>
               <PosterCard></PosterCard>
             </Box>
           </SwiperSlide>
           <SwiperSlide>
-            <Box p={10}>
+            <Box p={0}>
               <PosterCard></PosterCard>
             </Box>
           </SwiperSlide>
