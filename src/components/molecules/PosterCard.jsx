@@ -1,7 +1,7 @@
 import { Image } from '@mantine/core'
 import React from 'react'
 
-import banner from '../../assets/images/banner.png'
+import banner from '../../assets/images/movie-banner.jpg'
 
 const PosterCard = () => {
   return (
