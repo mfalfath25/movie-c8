@@ -1,9 +1,9 @@
-import { Container, SimpleGrid, Title } from '@mantine/core'
+import { Container, SimpleGrid, Text, Title } from '@mantine/core'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CardMovie from '../../components/molecules/CardMovie'
 import CategoryButton from '../../components/molecules/CategoryButton'
-import PosterSwiper from '../../components/molecules/PosterSwiper'
+import BannerSwiper from '../../components/molecules/BannerSwiper'
 
 const Home = () => {
   const [data, setData] = useState([])
@@ -12,8 +12,7 @@ const Home = () => {
   const baseURL = `https://www.omdbapi.com/?apikey=${apiKey}`
 
   const getData = async () => {
-    const res = await axios.get(`${baseURL}&page=10&s=black`)
-    console.log(res)
+    const res = await axios.get(`${baseURL}&s=fast`)
     setData(res.data.Search)
   }
 
@@ -25,9 +24,9 @@ const Home = () => {
   // console.log('DATA', data)
   return (
     <>
-      <PosterSwiper />
+      <BannerSwiper />
       <Container size="xl">
-        <Title order={2} sx={{ color: 'gray' }}>
+        <Title order={2} pt="sm" sx={{ color: 'gray' }}>
           Browse by Category
         </Title>
         <CategoryButton />

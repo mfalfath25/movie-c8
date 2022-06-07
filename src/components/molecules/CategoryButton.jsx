@@ -8,10 +8,10 @@ const CategoryButton = () => {
         All
       </Button>
       <Button radius="xl" size="sm" color="dark" mr={6}>
-        anime
+        etc
       </Button>
       <Button radius="xl" size="sm" color="dark">
-        action
+        etc
       </Button>
     </Box>
   )
