@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppShell, Header, Footer } from '@mantine/core'
+import { AppShell, Header, Footer, Box } from '@mantine/core'
 import HeaderContent from '../components/molecules/HeaderContent'
 import FooterContent from '../components/molecules/FooterContent'
 
@@ -7,6 +7,8 @@ const Shell = ({ children }) => {
   return (
     <AppShell
       sx={{
+        // position: ' relative',
+        // minHeight: '100vh',
         main: {
           padding: 0,
         },
@@ -16,7 +18,7 @@ const Shell = ({ children }) => {
       // fixed
       header={
         <Header
-          height={80}
+          height={'auto'}
           p="xs"
           // sx={{ display: 'flex', alignItems: 'center' }}
         >
@@ -28,9 +30,9 @@ const Shell = ({ children }) => {
           height={'auto'}
           p="xs"
           sx={{
-            position: 'absolute',
-            bottom: 0,
-            width: '100%',
+            // position: 'absolute',
+            // bottom: 0,
+            // width: '100vw',
             background: 'black',
             color: 'white',
           }}
@@ -39,7 +41,16 @@ const Shell = ({ children }) => {
         </Footer>
       }
     >
-      {children}
+      <Box
+        sx={
+          {
+            // position: 'relative',
+            // minHeight: '100%',
+          }
+        }
+      >
+        {children}
+      </Box>
     </AppShell>
   )
 }

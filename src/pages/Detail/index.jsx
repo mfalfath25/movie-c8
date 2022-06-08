@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { Box, Button, Container, Group, Image, Text, Title } from '@mantine/core'
-import Rating from '@mui/material/Rating'
+import { Box, Button, Container, Divider, Group, Image, Stack, Text, Title } from '@mantine/core'
 import notfound from '../../assets/images/notfound.jpg'
+import DescList from '../../components/atoms/DescList'
+import Stars from '../../components/atoms/Stars'
+import OverviewContent from '../../components/molecules/Detail/OverviewContent'
 
 const Detail = () => {
   const { id } = useParams()
@@ -35,9 +37,9 @@ const Detail = () => {
     <>
       <Container fluid p={0} sx={{ position: 'relative', background: 'black', color: 'white' }}>
         {movie?.Poster === 'N/A' ? (
-          <Image height={400} src={notfound} sx={{ filter: 'blur(4px)' }} />
+          <Image height={440} src={notfound} sx={{ filter: 'blur(4px)' }} />
         ) : (
-          <Image height={400} src={movie?.Poster} sx={{ filter: 'opacity(50%) blur(4px)' }} />
+          <Image height={440} src={movie?.Poster} sx={{ filter: 'opacity(50%) blur(4px)' }} />
         )}
         <Container
           size="xl"
@@ -51,16 +53,16 @@ const Detail = () => {
             display: 'flex',
             alignItems: 'center',
           }}
-          // sx={{ position: 'absolute', top: 0, left: 0 }}
         >
           <Box>
             <Title order={2} pb={4}>
               {movie?.Title} {movie?.Year ? `(${movie?.Year})` : ''}
             </Title>
-            <Rating value={rating} readOnly precision={0.5} />
-            <Box pt={4} sx={{ display: 'flex', width: '50%' }}>
+            <Stars rating={rating} />
+            <Box pt="md" sx={{ display: 'flex', width: '50%' }}>
               <Text
                 size="md"
+                lineClamp={4}
                 sx={{
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
@@ -85,6 +87,38 @@ const Detail = () => {
           </Box>
         </Container>
       </Container>
+      <OverviewContent movie={movie} />
+      {/* <Container size="xl" my="md">
+        <Stack spacing={0}>
+          <Divider
+            my="xs"
+            size="md"
+            label={
+              <Title order={3} mt={0} sx={{ color: 'black' }}>
+                Synopsis
+              </Title>
+            }
+          />
+          <Text>{movie?.Plot}</Text>
+        </Stack>
+        <Stack spacing={0}>
+          <Divider
+            my="xs"
+            size="md"
+            label={
+              <Title order={3} mt={0} sx={{ color: 'black' }}>
+                Movie Info
+              </Title>
+            }
+          />
+          <DescList first={'Release date'}>{movie?.Released}</DescList>
+          <DescList first={'Director'}>{movie?.Director}</DescList>
+          <DescList first={'Genre:'}>{movie?.Genre}</DescList>
+          <DescList first={'Rated'}>{movie?.Rated}</DescList>
+          <DescList first={'Duration'}>{movie?.Runtime}</DescList>
+          <DescList first={'Box office'}>{movie?.BoxOffice}</DescList>
+        </Stack>
+      </Container> */}
     </>
   )
 }
