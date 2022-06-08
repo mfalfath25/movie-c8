@@ -22,8 +22,9 @@ const CardMovie = ({ loading, item }) => {
         ) : (
           <>
             <Title order={4} pt={4}>
-              {item?.Title}
+              {item?.Title} {item?.Year ? `(${item?.Year})` : ''}
             </Title>
+            <Text pt={2}>{item?.Type}</Text>
           </>
         )}
         <Text size="md">{item.Genre}</Text>

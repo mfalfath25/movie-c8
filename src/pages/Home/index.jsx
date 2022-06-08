@@ -4,10 +4,11 @@ import React, { useEffect, useState } from 'react'
 import CardMovie from '../../components/molecules/CardMovie'
 import CategoryButton from '../../components/molecules/CategoryButton'
 import BannerSwiper from '../../components/molecules/BannerSwiper'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
+  const navigate = useNavigate()
   const [movies, setMovies] = useState([])
-  const [movie, setMovie] = useState({})
   const [keyword, setKeyword] = useState('fast')
   const [loading, setLoading] = useState(false)
   const [pages, setPages] = useState(1)
@@ -35,18 +36,6 @@ const Home = () => {
       })
   }
 
-  const getMovie = (movieId) => {
-    axios
-      .get(`${baseURL}&i=${movieId}&plot=full`)
-      .then((res) => {
-        // console.log(res.data);
-        setMovie(res.data)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
-
   const handlePageChange = (pages) => {
     setPages(pages)
     getMovies(keyword, pages)
@@ -57,7 +46,7 @@ const Home = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log('DATA', movies)
+  // console.log('DATA', movies)
   return (
     <>
       <BannerSwiper />
@@ -76,13 +65,19 @@ const Home = () => {
           ]}
         >
           {movies?.map((item, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              onClick={() => {
+                navigate(`/detail/${item.imdbID}`)
+              }}
+              sx={{ cursor: 'pointer' }}
+            >
               <CardMovie loading={loading} item={item}></CardMovie>
             </div>
           ))}
         </SimpleGrid>
         <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-          <Pagination page={pages} onChange={handlePageChange} total={10} />
+          <Pagination page={pages} onChange={handlePageChange} total={total} />
         </Box>
       </Container>
     </>

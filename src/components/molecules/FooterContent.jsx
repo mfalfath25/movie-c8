@@ -86,11 +86,3 @@ const FooterContent = () => {
 }
 
 export default FooterContent
-
-// .mendekin-title-film {
-
-//   overflow: hidden;
-//   text-overflow: ellipsis;
-//   white-space: nowrap;
-
-//   }

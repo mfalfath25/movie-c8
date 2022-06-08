@@ -24,7 +24,17 @@ const Shell = ({ children }) => {
         </Header>
       }
       footer={
-        <Footer height={'auto'} p="xs" sx={{ background: 'black', color: 'white' }}>
+        <Footer
+          height={'auto'}
+          p="xs"
+          sx={{
+            position: 'absolute',
+            bottom: 0,
+            width: '100%',
+            background: 'black',
+            color: 'white',
+          }}
+        >
           <FooterContent />
         </Footer>
       }
