@@ -20,14 +20,27 @@ const CharacterSection = ({ movie }) => {
   return (
     <Container size="xl" my="md">
       <SimpleGrid cols={5} spacing="sm">
-        {actors.map((actor, index) => (
-          <div key={index}>
-            <Image radius="md" src={nopicture}></Image>
-            <Text pt="xs" weight={700} sx={{ display: 'flex', justifyContent: 'center' }}>
-              {actor}
-            </Text>
-          </div>
-        ))}
+        {actors.length === 0 ? (
+          <>
+            <div>
+              <Image radius="md" src={nopicture} />
+              <Text pt="xs" weight={700} sx={{ display: 'flex', justifyContent: 'center' }}>
+                N/A
+              </Text>
+            </div>
+          </>
+        ) : (
+          <>
+            {actors?.map((actor, index) => (
+              <div key={index}>
+                <Image radius="md" src={nopicture}></Image>
+                <Text pt="xs" weight={700} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  {actor}
+                </Text>
+              </div>
+            ))}
+          </>
+        )}
       </SimpleGrid>
     </Container>
   )

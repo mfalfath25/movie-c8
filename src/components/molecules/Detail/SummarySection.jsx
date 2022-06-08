@@ -1,14 +1,14 @@
 import { Box, Button, Group, Text, Title } from '@mantine/core'
 import React from 'react'
-import Stars from '../../atoms/Stars'
+import StarsDisplay from '../../atoms/StarsDisplay'
 
-const SummarySection = ({ movie, rating }) => {
+const SummarySection = ({ movie, rating, loading }) => {
   return (
     <Box>
       <Title order={2} pb={4}>
         {movie?.Title} {movie?.Year ? `(${movie?.Year})` : ''}
       </Title>
-      <Stars rating={rating} />
+      <StarsDisplay rating={rating} />
       <Box pt="md" sx={{ display: 'flex', width: '50%' }}>
         <Text
           size="md"

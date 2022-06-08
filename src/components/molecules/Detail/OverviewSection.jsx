@@ -2,7 +2,7 @@ import { Container, Divider, Stack, Text, Title } from '@mantine/core'
 import React from 'react'
 import DescList from '../../atoms/DescList'
 
-const OverviewContent = ({ movie }) => {
+const OverviewSection = ({ movie, loading }) => {
   return (
     <Container size="xl" my="md">
       <Stack spacing={0}>
@@ -38,4 +38,4 @@ const OverviewContent = ({ movie }) => {
   )
 }
 
-export default OverviewContent
+export default OverviewSection

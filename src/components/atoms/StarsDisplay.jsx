@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Stars = ({ rating }) => {
+const StarsDisplay = ({ rating }) => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -30,4 +30,4 @@ const Stars = ({ rating }) => {
     </div>
   )
 }
-export default Stars
+export default StarsDisplay

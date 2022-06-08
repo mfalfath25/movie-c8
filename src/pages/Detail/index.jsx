@@ -3,10 +3,10 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import { Box, Button, Container, Group, Image, Text, Title } from '@mantine/core'
 import notfound from '../../assets/images/notfound.jpg'
-import Stars from '../../components/atoms/Stars'
-import OverviewContent from '../../components/molecules/Detail/OverviewContent'
+import OverviewSection from '../../components/molecules/Detail/OverviewSection'
 import CharacterSection from '../../components/molecules/Detail/CharacterSection'
 import SummarySection from '../../components/molecules/Detail/SummarySection'
+import ReviewSection from '../../components/molecules/Detail/ReviewSection'
 
 const Detail = () => {
   const { id } = useParams()
@@ -37,7 +37,7 @@ const Detail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log('Movie', movie)
+  // console.log('Movie', movie)
   return (
     <>
       <Container fluid p={0} sx={{ position: 'relative', background: 'black', color: 'white' }}>
@@ -59,11 +59,12 @@ const Detail = () => {
             alignItems: 'center',
           }}
         >
-          <SummarySection movie={movie} rating={rating} />
+          <SummarySection movie={movie} rating={rating} loading={loading} />
         </Container>
       </Container>
-      <OverviewContent movie={movie} loading={loading} />
-      <CharacterSection movie={movie} loading={loading} />
+      {/* <OverviewSection movie={movie} loading={loading} /> */}
+      {/* <CharacterSection movie={movie} loading={loading} /> */}
+      <ReviewSection loading={loading} />
     </>
   )
 }
