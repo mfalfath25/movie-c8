@@ -1,5 +1,5 @@
 import React from 'react'
-import { Anchor, Box, Container, Divider, Grid, Group, Image, Text, Title } from '@mantine/core'
+import { Anchor, Box, Container, Divider, Grid, Group, Image, Text } from '@mantine/core'
 import Logo from '../atoms/Logo'
 
 // assets
@@ -17,9 +17,11 @@ const FooterContent = () => {
           <Grid.Col span={5}>
             <Logo />
             <Text size="md" pt="xs">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard.printing and typesetting industry. Lorem Ipsum has
-              been the industry's standard
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum delectus impedit
+              tempore in dolor minus distinctio saepe perferendis ducimus, officiis facere quisquam
+              neque excepturi dolorem libero ea consectetur sapiente maxime explicabo quos
+              voluptates numquam soluta! Aperiam perspiciatis numquam, quis est sapiente cumque
+              eius.
             </Text>
           </Grid.Col>
           <Grid.Col span={2}>
@@ -71,10 +73,10 @@ const FooterContent = () => {
               </Grid.Col>
             </Grid>
           </Grid.Col>
-          <Grid.Col span={4}>
+          <Grid.Col span={4} pt={0}>
             <Divider my="sm" />
             <Text size="md" sx={{ display: 'flex', justifyContent: 'center' }}>
-              Copyright © 2000-202 MilanTV. All Rights Reserved
+              Copyright © 2002-2022 TTV. All Rights Reserved
             </Text>
           </Grid.Col>
         </Grid>

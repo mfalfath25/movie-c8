@@ -16,13 +16,13 @@ const BannerSwiper = () => {
     <>
       <Swiper pagination={true} modules={[Pagination]}>
         <SwiperSlide>
-          <Image height={320} src={banner1}></Image>
+          <Image height={360} src={banner1}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image height={320} src={banner2}></Image>
+          <Image height={360} src={banner2}></Image>
         </SwiperSlide>
         <SwiperSlide>
-          <Image height={320} src={banner3}></Image>
+          <Image height={360} src={banner3}></Image>
         </SwiperSlide>
       </Swiper>
     </>
