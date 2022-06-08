@@ -1227,19 +1227,6 @@
     "@emotion/weak-memoize" "^0.2.5"
     hoist-non-react-statics "^3.3.1"
 
-"@emotion/react@^11.9.0":
-  version "11.9.0"
-  resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.9.0.tgz#b6d42b1db3bd7511e7a7c4151dc8bc82e14593b8"
-  integrity sha512-lBVSF5d0ceKtfKCDQJveNAtkC7ayxpVlgOohLgXqRwqWr9bOf4TZAFFyIcNngnV6xK6X4x2ZeXq7vliHkoVkxQ==
-  dependencies:
-    "@babel/runtime" "^7.13.10"
-    "@emotion/babel-plugin" "^11.7.1"
-    "@emotion/cache" "^11.7.1"
-    "@emotion/serialize" "^1.0.3"
-    "@emotion/utils" "^1.1.0"
-    "@emotion/weak-memoize" "^0.2.5"
-    hoist-non-react-statics "^3.3.1"
-
 "@emotion/serialize@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.2.tgz#77cb21a0571c9f68eb66087754a65fa97bfcd965"
@@ -1251,7 +1238,7 @@
     "@emotion/utils" "^1.0.0"
     csstype "^3.0.2"
 
-"@emotion/serialize@^1.0.2", "@emotion/serialize@^1.0.3":
+"@emotion/serialize@^1.0.2":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-1.0.3.tgz#99e2060c26c6292469fb30db41f4690e1c8fea63"
   integrity sha512-2mSSvgLfyV3q+iVh3YWgNlUc2a9ZlDU7DjuP5MjK3AXRR0dYigCrP99aeFtaB2L/hjfEZdSThn5dsZ0ufqbvsA==
@@ -1616,11 +1603,6 @@
     "@radix-ui/react-scroll-area" "^0.1.1"
     react-popper "^2.2.5"
     react-textarea-autosize "^8.3.2"
-
-"@mantine/dates@^4.2.8":
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/@mantine/dates/-/dates-4.2.8.tgz#e48cd7e008cc4d29ca711adca637a885024e9805"
-  integrity sha512-ofzgDTwLRvFoucGd6/Oi6d81I8ZATL3+tWRHa6m8/2IyrVcCogv4cY9CCkmY+Jli2LzM6kmsig2t2MZJsXNhKA==
 
 "@mantine/form@^4.2.8":
   version "4.2.8"

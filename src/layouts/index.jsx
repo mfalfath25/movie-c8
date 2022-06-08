@@ -29,6 +29,7 @@ const Shell = ({ children }) => {
         <Footer
           height={'auto'}
           p="xs"
+          py="md"
           sx={{
             // position: 'absolute',
             // bottom: 0,

@@ -2,14 +2,15 @@ import React from 'react'
 import { Box, Container, Grid, Image, Text, Textarea } from '@mantine/core'
 import StarsReview from '../../atoms/StarsReview'
 
-import nopicture from '../../../assets/images/nopicture.jpg'
+// import nopicture from '../../../assets/images/nopicture.jpg'
+import amnesty from '../../../assets/images/amnesty-squared.jpg'
 
 const ReviewSection = ({ loading }) => {
   return (
     <Container size="xl" my="md">
       <Grid grow gutter="xs">
         <Grid.Col span={1}>
-          <Image width={80} radius="md" src={nopicture} m={0}></Image>
+          <Image width={80} radius="md" src={amnesty} m={0}></Image>
         </Grid.Col>
         <Grid.Col span={11}>
           <Box>

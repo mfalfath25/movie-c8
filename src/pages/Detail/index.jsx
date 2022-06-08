@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import { Box, Button, Container, Group, Image, Text, Title } from '@mantine/core'
+import { Container, Image } from '@mantine/core'
 import notfound from '../../assets/images/notfound.jpg'
-import OverviewSection from '../../components/molecules/Detail/OverviewSection'
-import CharacterSection from '../../components/molecules/Detail/CharacterSection'
-import SummarySection from '../../components/molecules/Detail/SummarySection'
-import ReviewSection from '../../components/molecules/Detail/ReviewSection'
+import {
+  OverviewSection,
+  CharacterSection,
+  SummarySection,
+  ReviewSection,
+} from '../../components/molecules/Detail'
 
 const Detail = () => {
   const { id } = useParams()
@@ -62,8 +64,8 @@ const Detail = () => {
           <SummarySection movie={movie} rating={rating} loading={loading} />
         </Container>
       </Container>
-      {/* <OverviewSection movie={movie} loading={loading} /> */}
-      {/* <CharacterSection movie={movie} loading={loading} /> */}
+      <OverviewSection movie={movie} loading={loading} />
+      <CharacterSection movie={movie} loading={loading} />
       <ReviewSection loading={loading} />
     </>
   )

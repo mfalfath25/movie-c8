@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, Paper, Skeleton, Text, Title } from '@mantine/core'
 
-import notfound from '../../assets/images/notfound.jpg'
+import notfound from '../../../assets/images/notfound.jpg'
 
 const CardMovie = ({ item, loading }) => {
   return (

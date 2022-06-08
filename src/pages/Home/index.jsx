@@ -1,9 +1,8 @@
-import { Box, Container, Pagination, SimpleGrid, Title } from '@mantine/core'
-import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import CardMovie from '../../components/molecules/CardMovie'
+import axios from 'axios'
+import { Box, Container, Pagination, SimpleGrid, Title } from '@mantine/core'
+import { BannerSwiper, CardMovie } from '../../components/molecules/Home'
 import CategoryButton from '../../components/molecules/CategoryButton'
-import BannerSwiper from '../../components/molecules/BannerSwiper'
 import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
