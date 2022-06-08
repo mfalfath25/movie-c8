@@ -3,7 +3,7 @@ import { Image, Paper, Skeleton, Text, Title } from '@mantine/core'
 
 import notfound from '../../assets/images/notfound.jpg'
 
-const CardMovie = ({ loading, item }) => {
+const CardMovie = ({ item, loading }) => {
   return (
     <>
       <Paper shadow="none" radius="md" sx={{ width: '240px', height: 'auto', minHeight: '420px' }}>

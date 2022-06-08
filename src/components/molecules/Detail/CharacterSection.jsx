@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Image, SimpleGrid, Text, Title } from '@mantine/core'
+import { Container, Image, SimpleGrid, Text } from '@mantine/core'
 import nopicture from '../../../assets/images/nopicture.jpg'
 const CharacterSection = ({ movie }) => {
   const [actors, setActors] = useState([])
