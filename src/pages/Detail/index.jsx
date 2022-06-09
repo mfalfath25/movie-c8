@@ -8,6 +8,7 @@ import {
   CharacterSection,
   SummarySection,
   ReviewSection,
+  DisplaySelection,
 } from '../../components/molecules/Detail'
 
 const Detail = () => {
@@ -15,6 +16,7 @@ const Detail = () => {
   const [movie, setMovie] = useState({})
   const [rating, setRating] = useState(0)
   const [loading, setLoading] = useState(false)
+  const [display, setDisplay] = useState('overview')
   const apiKey = '2b719aca'
   const baseURL = `https://www.omdbapi.com/?apikey=${apiKey}`
 
@@ -64,9 +66,12 @@ const Detail = () => {
           <SummarySection movie={movie} rating={rating} loading={loading} />
         </Container>
       </Container>
-      <OverviewSection movie={movie} loading={loading} />
-      <CharacterSection movie={movie} loading={loading} />
-      <ReviewSection loading={loading} />
+      <Container size="xl" mt="md">
+        <DisplaySelection display={display} />
+        <OverviewSection movie={movie} loading={loading} />
+        <CharacterSection movie={movie} loading={loading} />
+        <ReviewSection loading={loading} />
+      </Container>
     </>
   )
 }

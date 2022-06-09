@@ -1,6 +1,6 @@
-import { Box, Button, Checkbox, Group, Text, TextInput } from '@mantine/core'
-import { useForm } from '@mantine/form'
 import React from 'react'
+import { Box, Button, Group, TextInput } from '@mantine/core'
+import { useForm } from '@mantine/form'
 
 const Login = () => {
   const form = useForm({

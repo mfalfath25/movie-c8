@@ -1,24 +1,34 @@
-import { Box, Button } from '@mantine/core'
 import React, { useState } from 'react'
+import { Box, Title } from '@mantine/core'
+import { SelectButton } from '../atoms'
 
 const CategoryButton = () => {
-  const [btnVariant, setBtnVariant] = useState('subtle')
+  // const [btnVariant, setBtnVariant] = useState('filled')
+  // const [active, setActive] = useState(false)
 
-  const handleClick = () => {
-    setBtnVariant(btnVariant === 'subtle' ? 'filled' : 'subtle')
-  }
+  // const handleClick = (e) => {
+  //   e.preventDefault()
+  //   const { value } = e.target
+  //   setVal(value)
+  //   console.log(val)
+  //   // setBtnVariant(btnVariant === 'subtle' ? 'filled' : 'subtle')
+  // }
+
+  // const handleClick = () => {
+  //   setBtnVariant(btnVariant === 'subtle' ? 'filled' : 'subtle')
+  // }
 
   return (
-    <Box py={12}>
-      <Button variant={btnVariant} onClick={handleClick} radius="xl" size="sm" color="dark" mr={6}>
-        All
-      </Button>
-      <Button variant={btnVariant} onClick={handleClick} radius="xl" size="sm" color="dark" mr={6}>
-        etc
-      </Button>
-      <Button variant="subtle" radius="xl" size="sm" color="dark">
-        etc
-      </Button>
+    <Box mb="md">
+      <Title order={2} sx={{ color: 'gray' }} mb="xs">
+        Browse by Category
+      </Title>
+      <SelectButton text="All" />
+      <SelectButton text="Anime" />
+      <SelectButton text="Action" />
+      <SelectButton text="Advanture" />
+      <SelectButton text="Sci-Fi" />
+      <SelectButton text="Comedy" />
     </Box>
   )
 }

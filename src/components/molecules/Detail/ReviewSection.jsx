@@ -1,14 +1,14 @@
 import React from 'react'
-import { Box, Container, Grid, Image, Text, Textarea } from '@mantine/core'
-import StarsReview from '../../atoms/StarsReview'
+import { Box, Grid, Image, Text, Textarea } from '@mantine/core'
+import { StarsReview } from '../../atoms'
 
 // import nopicture from '../../../assets/images/nopicture.jpg'
 import amnesty from '../../../assets/images/amnesty-squared.jpg'
 
 const ReviewSection = ({ loading }) => {
   return (
-    <Container size="xl" my="md">
-      <Grid grow gutter="xs">
+    <>
+      <Grid grow gutter="xs" my="sm">
         <Grid.Col span={1}>
           <Image width={80} radius="md" src={amnesty} m={0}></Image>
         </Grid.Col>
@@ -24,7 +24,7 @@ const ReviewSection = ({ loading }) => {
           <Textarea placeholder="Leave a review" size="md" />
         </Grid.Col>
       </Grid>
-    </Container>
+    </>
   )
 }
 

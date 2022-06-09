@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Container, Image, SimpleGrid, Text } from '@mantine/core'
+import { Image, SimpleGrid, Text } from '@mantine/core'
 import nopicture from '../../../assets/images/nopicture.jpg'
+
 const CharacterSection = ({ movie }) => {
   const [actors, setActors] = useState([])
 
@@ -18,8 +19,8 @@ const CharacterSection = ({ movie }) => {
   }, [movie.Actors])
 
   return (
-    <Container size="xl" my="md">
-      <SimpleGrid cols={5} spacing="sm">
+    <>
+      <SimpleGrid cols={5} spacing="sm" my="md">
         {actors.length === 0 ? (
           <>
             <div>
@@ -42,7 +43,7 @@ const CharacterSection = ({ movie }) => {
           </>
         )}
       </SimpleGrid>
-    </Container>
+    </>
   )
 }
 

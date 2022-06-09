@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom'
 const Home = () => {
   const navigate = useNavigate()
   const [movies, setMovies] = useState([])
-  const [keyword, setKeyword] = useState('fast')
+  const [keyword, setKeyword] = useState('speed')
   const [loading, setLoading] = useState(false)
   const [pages, setPages] = useState(1)
   const [total, setTotal] = useState(0)
@@ -16,7 +16,7 @@ const Home = () => {
   const apiKey = '2b719aca'
   const baseURL = `https://www.omdbapi.com/?apikey=${apiKey}`
 
-  const getMovies = async (term = 'fast', page = 1) => {
+  const getMovies = async (term = 'speed', page = 1) => {
     setLoading(true)
     await axios
       .get(`${baseURL}&s=${encodeURIComponent(term)}&plot=full&page=${page}`)
@@ -50,9 +50,6 @@ const Home = () => {
     <>
       <BannerSwiper />
       <Container size="xl" py="sm">
-        <Title order={2} sx={{ color: 'gray' }}>
-          Browse by Category
-        </Title>
         <CategoryButton />
         <SimpleGrid
           cols={5}

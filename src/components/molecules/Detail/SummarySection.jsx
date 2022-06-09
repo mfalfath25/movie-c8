@@ -1,6 +1,6 @@
-import { Box, Button, Group, Text, Title } from '@mantine/core'
 import React from 'react'
-import StarsDisplay from '../../atoms/StarsDisplay'
+import { Box, Button, Group, Text, Title } from '@mantine/core'
+import { StarsDisplay } from '../../atoms'
 
 const SummarySection = ({ movie, rating, loading }) => {
   return (

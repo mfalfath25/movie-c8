@@ -1,11 +1,11 @@
-import { Container, Divider, Stack, Text, Title } from '@mantine/core'
 import React from 'react'
-import DescList from '../../atoms/DescList'
+import { Divider, Stack, Text, Title } from '@mantine/core'
+import { DescList } from '../../atoms'
 
 const OverviewSection = ({ movie, loading }) => {
   return (
-    <Container size="xl" my="md">
-      <Stack spacing={0}>
+    <>
+      <Stack spacing={0} my="sm">
         <Divider
           my="xs"
           size="md"
@@ -34,7 +34,7 @@ const OverviewSection = ({ movie, loading }) => {
         <DescList first={'Duration'}>{movie?.Runtime}</DescList>
         <DescList first={'Box office'}>{movie?.BoxOffice}</DescList>
       </Stack>
-    </Container>
+    </>
   )
 }
 
