@@ -15,7 +15,7 @@ const FooterContent = () => {
       <Container size="xl">
         <Grid grow gutter="md">
           <Grid.Col span={5}>
-            <Logo />
+            <Logo disabled />
             <Text size="md" pt="xs">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum delectus impedit
               tempore in dolor minus distinctio saepe perferendis ducimus, officiis facere quisquam

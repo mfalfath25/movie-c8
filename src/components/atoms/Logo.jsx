@@ -1,22 +1,34 @@
 import { Anchor, Box, Image, Title } from '@mantine/core'
 import logo from '../../assets/images/logo.png'
 
-const Logo = () => {
+const Ttv = () => {
   return (
-    <Anchor href="/" variant="text">
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-        }}
-      >
-        <Image height={40} fit="contain" src={logo} />
-        <Title order={3} pl={6}>
-          TTV
-        </Title>
-      </Box>
-    </Anchor>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+      }}
+    >
+      <Image height={40} fit="contain" src={logo} />
+      <Title order={3} pl={6}>
+        TTV
+      </Title>
+    </Box>
+  )
+}
+
+const Logo = ({ disabled }) => {
+  return (
+    <>
+      {disabled ? (
+        <Ttv />
+      ) : (
+        <Anchor href="/" variant="text">
+          <Ttv />
+        </Anchor>
+      )}
+    </>
   )
 }
 
