@@ -16,7 +16,7 @@ const Detail = () => {
   const [movie, setMovie] = useState({})
   const [rating, setRating] = useState(0)
   const [loading, setLoading] = useState(false)
-  const [display, setDisplay] = useState('overview')
+  const [display, setDisplay] = useState('Overview')
   const apiKey = '2b719aca'
   const baseURL = `https://www.omdbapi.com/?apikey=${apiKey}`
 
@@ -36,12 +36,29 @@ const Detail = () => {
       })
   }
 
+  let component
+  switch (display) {
+    case 'Overview':
+      component = <OverviewSection movie={movie} loading={loading} />
+      break
+    case 'Characters':
+      component = <CharacterSection movie={movie} loading={loading} />
+      break
+    case 'Review':
+      component = <ReviewSection loading={loading} />
+      break
+    default:
+      component = <OverviewSection movie={movie} loading={loading} />
+  }
+
   useEffect(() => {
     getMovie(id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // console.log('Movie', movie)
+  console.log('Movie', movie)
+  // console.log('DISPLAY PARENT', display)
+
   return (
     <>
       <Container fluid p={0} sx={{ position: 'relative', background: 'black', color: 'white' }}>
@@ -66,11 +83,12 @@ const Detail = () => {
           <SummarySection movie={movie} rating={rating} loading={loading} />
         </Container>
       </Container>
-      <Container size="xl" mt="md">
-        <DisplaySelection display={display} />
-        <OverviewSection movie={movie} loading={loading} />
+      <Container size="xl" my="md">
+        <DisplaySelection display={display} setDisplay={setDisplay} />
+        {component}
+        {/* <OverviewSection movie={movie} loading={loading} />
         <CharacterSection movie={movie} loading={loading} />
-        <ReviewSection loading={loading} />
+        <ReviewSection loading={loading} /> */}
       </Container>
     </>
   )

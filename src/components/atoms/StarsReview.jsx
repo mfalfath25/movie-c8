@@ -4,6 +4,7 @@ import StarRateIcon from '@mui/icons-material/StarRate'
 
 const StarsReview = () => {
   const [value, setValue] = useState(0)
+  // eslint-disable-next-line no-unused-vars
   const [hover, setHover] = useState(-1)
   return (
     <>
