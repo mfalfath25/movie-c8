@@ -8,6 +8,7 @@ const SummarySection = ({ movie, rating, loading }) => {
         {movie?.Title} {movie?.Year ? `(${movie?.Year})` : ''}
       </Title>
       <StarsDisplay rating={rating} />
+      <Text sx={{ display: 'inline' }}> {movie?.imdbVotes} Votes</Text>
       <Box pt="md" sx={{ display: 'flex', width: '50%' }}>
         <Text
           size="md"

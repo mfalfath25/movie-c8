@@ -26,7 +26,6 @@ const CardMovie = ({ item, loading }) => {
             <Text pt={2}>{item?.Type}</Text>
           </>
         )}
-        <Text size="md">{item.Genre}</Text>
       </Paper>
     </>
   )
