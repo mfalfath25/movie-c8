@@ -1,4 +1,3 @@
-import React from 'react'
 import { Anchor, Box, Container, Divider, Grid, Group, Image, Text } from '@mantine/core'
 import Logo from '../atoms/Logo'
 

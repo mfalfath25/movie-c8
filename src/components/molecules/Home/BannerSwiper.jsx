@@ -3,9 +3,9 @@ import { Image } from '@mantine/core'
 
 // Swiper imports
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Pagination } from 'swiper'
 
 import banner1 from '../../../assets/images/banner-1.jpg'
 import banner2 from '../../../assets/images/banner-2.jpg'

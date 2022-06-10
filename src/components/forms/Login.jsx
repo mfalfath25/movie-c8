@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Button, Group, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
 

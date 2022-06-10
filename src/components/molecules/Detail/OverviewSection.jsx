@@ -1,4 +1,3 @@
-import React from 'react'
 import { Divider, Stack, Text, Title } from '@mantine/core'
 import { DescList } from '../../atoms'
 

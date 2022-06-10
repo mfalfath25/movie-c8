@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Box, Container, Pagination, SimpleGrid, Title } from '@mantine/core'
-import { BannerSwiper, CardMovie } from '../../components/molecules/Home'
-import CategoryButton from '../../components/molecules/CategoryButton'
+import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Box, Container, Pagination, SimpleGrid } from '@mantine/core'
+import { BannerSwiper, CardMovie } from '../../components/molecules/Home'
+import CategorySelection from '../../components/molecules/CategorySelection'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -49,8 +49,8 @@ const Home = () => {
   return (
     <>
       <BannerSwiper />
-      <Container size="xl" py="sm">
-        <CategoryButton />
+      <Container size="xl" py="md">
+        <CategorySelection />
         <SimpleGrid
           cols={5}
           breakpoints={[

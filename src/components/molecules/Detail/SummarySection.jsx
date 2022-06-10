@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Button, Group, Text, Title } from '@mantine/core'
 import { StarsDisplay } from '../../atoms'
 
@@ -23,7 +22,7 @@ const SummarySection = ({ movie, rating, loading }) => {
         </Text>
       </Box>
       <Group pt="md">
-        <Button size="lg" sx={{ background: '#FE024E' }}>
+        <Button size="lg" sx={{ background: '#FE024E', '&:hover': { background: 'black' } }}>
           Watch Trailer
         </Button>
         <Button variant="outline" size="lg" sx={{ border: '2px solid white', color: 'white' }}>

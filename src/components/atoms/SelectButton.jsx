@@ -1,17 +1,18 @@
-import React from 'react'
 import { Button } from '@mantine/core'
 
 const SelectButton = (props) => {
+  const { text, changeDisplay, display } = props
+  const bgColor = display === text ? '#FE024E' : '#F585A7'
+
   return (
     <>
       <Button
-        variant="filled"
+        variant={(display === text ? 'filled' : 'subtle') || 'subtle'}
         radius="xl"
-        onClick={() => props.changeDisplay(props.text)}
+        onClick={() => changeDisplay(text)}
         size="sm"
-        color="dark"
         mr={6}
-        sx={{ background: '#EB507F', '&:hover': { background: '#FE024E' } }}
+        sx={{ color: 'white', background: `${bgColor}`, '&:hover': { background: '#FE024E' } }}
       >
         {props.text}
       </Button>

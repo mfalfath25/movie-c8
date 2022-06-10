@@ -1,6 +1,7 @@
-import StarBorderIcon from '@mui/icons-material/StarBorder'
 import { Rating } from '@mui/material'
 import { makeStyles } from '@material-ui/core/styles'
+import StarRateIcon from '@mui/icons-material/StarRate'
+// import StarBorderIcon from '@mui/icons-material/StarBorder'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,7 +26,7 @@ const StarsDisplay = ({ rating }) => {
         value={rating}
         precision={0.5}
         readOnly
-        emptyIcon={<StarBorderIcon fontSize="inherit" className={classes.emptyStar} />}
+        emptyIcon={<StarRateIcon fontSize="inherit" className={classes.emptyStar} />}
       />
     </div>
   )

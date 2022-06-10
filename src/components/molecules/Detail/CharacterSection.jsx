@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Image, SimpleGrid, Text } from '@mantine/core'
 import nopicture from '../../../assets/images/nopicture.jpg'
 

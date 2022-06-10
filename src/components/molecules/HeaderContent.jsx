@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Button, Container, Grid, Input, Modal, Stack, Text } from '@mantine/core'
-import Logo from '../atoms/Logo'
 import { LoginForm, RegisterForm } from '../forms'
 // eslint-disable-next-line no-unused-vars
 import { useLocation, useNavigate } from 'react-router-dom'
+import Logo from '../atoms/Logo'
 
 const HeaderContent = () => {
   const [open, setOpen] = useState(false)

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Box, Grid, Image, Text, Textarea } from '@mantine/core'
 import { StarsReview } from '../../atoms'
 

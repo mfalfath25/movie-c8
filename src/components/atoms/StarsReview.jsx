@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Rating } from '@mui/material'
 import StarRateIcon from '@mui/icons-material/StarRate'
 

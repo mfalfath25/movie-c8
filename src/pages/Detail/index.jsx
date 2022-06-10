@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Container, Image } from '@mantine/core'
-import notfound from '../../assets/images/notfound.jpg'
 import {
   OverviewSection,
   CharacterSection,
@@ -10,6 +9,7 @@ import {
   ReviewSection,
   DisplaySelection,
 } from '../../components/molecules/Detail'
+import notfound from '../../assets/images/notfound.jpg'
 
 const Detail = () => {
   const { id } = useParams()
@@ -56,7 +56,7 @@ const Detail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log('Movie', movie)
+  // console.log('MOVIE', movie)
   // console.log('DISPLAY PARENT', display)
 
   return (
@@ -83,12 +83,9 @@ const Detail = () => {
           <SummarySection movie={movie} rating={rating} loading={loading} />
         </Container>
       </Container>
-      <Container size="xl" my="md">
+      <Container size="xl" py="md">
         <DisplaySelection display={display} setDisplay={setDisplay} />
         {component}
-        {/* <OverviewSection movie={movie} loading={loading} />
-        <CharacterSection movie={movie} loading={loading} />
-        <ReviewSection loading={loading} /> */}
       </Container>
     </>
   )
